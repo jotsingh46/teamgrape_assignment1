@@ -19,6 +19,7 @@ class JournalEntry
 
 class Hugi
 {
+
     private static JournalEntry je;
     public static bool FoundAstrilde = false;
     public static List<JournalEntry> HugiJournal = new List<JournalEntry>();
