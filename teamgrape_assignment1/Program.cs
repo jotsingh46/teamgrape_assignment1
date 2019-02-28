@@ -30,7 +30,6 @@ class Hugi
         foreach (var je in HugiJournal)
         {
             Console.WriteLine(" {0}  --   {1} *** --- {2} ", je.getDistanceWalked(), je.getVillageName(), je.HowFarToGetBack);
-            Console.ReadLine();
             DistanceWalked += je.getDistanceWalked() + je.HowFarToGetBack;
         }
         return DistanceWalked;
@@ -70,6 +69,7 @@ class CountrySide
                 Console.WriteLine("I found Dear Astrildge in {0}", CurrentVillage.VillageName);
                 Console.WriteLine("**** FEELING HAPPY!!! ******");
                 Console.WriteLine("Astrilde, I walked {0} vika to find you. Will you marry me?", Hugi.CalculateDistanceWalked());
+                Console.WriteLine("Press Enter key to continue");
                 Console.ReadLine();
                 Hugi.FoundAstrilde = true;
             }
@@ -105,13 +105,12 @@ class CountrySide
     {
         try
         {
-            using (StreamReader sr = new StreamReader("C:/assignment/ann.txt"))
+            using (StreamReader sr = new StreamReader("C:/assignment/announcement.txt"))
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
                     Console.WriteLine(line);
-                    Console.ReadLine();
                 }
             }
         }
@@ -120,8 +119,8 @@ class CountrySide
             // Let the user know what went wrong.
             Console.WriteLine("The file could not be read:");
             Console.WriteLine(e.Message);
-            Console.ReadLine();
         }
+        Console.ReadLine();
     }
 }
 
