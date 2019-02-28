@@ -145,5 +145,4 @@ class Village
     public string VillageName;
     public int distanceFromPreviousVillage;
     public bool isAstrildgeHere;
-
 }
